@@ -97,3 +97,65 @@ export interface SubscriptionTier {
   features: string[];
   stripe_price_id: string;
 }
+
+export interface CarListing {
+  id: string;
+  source: 'autotrader' | 'pistonheads' | 'carandclassic' | 'mobile_de' | 'autoscout24';
+  source_url: string;
+  external_id?: string;
+  make: string;
+  model: string;
+  year?: number;
+  mileage?: number;
+  fuel_type?: string;
+  transmission?: string;
+  colour?: string;
+  price: number;
+  currency: string;
+  price_gbp: number;
+  country: 'UK' | 'DE' | 'FR' | 'NL';
+  region?: string;
+  images: string[];
+  listed_at?: string;
+  is_fair_value?: boolean;
+  price_vs_market_pct?: number;
+  created_at: string;
+}
+
+export interface ResearchReport {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt?: string;
+  content?: string;
+  cover_image?: string;
+  car_make?: string;
+  car_model?: string;
+  investment_rating?: 'excellent' | 'good' | 'moderate';
+  rarity_score?: number;
+  road_registered_uk?: number;
+  is_premium: boolean;
+  published_at?: string;
+  created_at: string;
+}
+
+export interface MarketData {
+  id: string;
+  make?: string;
+  model?: string;
+  year?: number;
+  price: number;
+  currency: string;
+  source: string;
+  sale_date: string;
+}
+
+export interface DVLAData {
+  id: string;
+  make: string;
+  model: string;
+  registered_uk: number;
+  taxed_uk: number;
+  sot_uk: number;
+  updated_at: string;
+}

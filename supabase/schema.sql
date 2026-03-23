@@ -255,3 +255,92 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER increment_reply_count_trigger AFTER INSERT ON forum_posts FOR EACH ROW EXECUTE FUNCTION increment_reply_count();
+
+-- ============================================================
+-- Car Listings (Aggregated from multiple sources)
+-- ============================================================
+CREATE TABLE car_listings (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  source VARCHAR(50) NOT NULL,
+  source_url VARCHAR(500) NOT NULL,
+  external_id VARCHAR(200),
+  make VARCHAR(100) NOT NULL,
+  model VARCHAR(100) NOT NULL,
+  year INTEGER,
+  mileage INTEGER,
+  fuel_type VARCHAR(50),
+  transmission VARCHAR(50),
+  colour VARCHAR(50),
+  price INTEGER NOT NULL,
+  currency VARCHAR(3) DEFAULT 'GBP',
+  price_gbp INTEGER,
+  country VARCHAR(2) NOT NULL,
+  region VARCHAR(100),
+  images TEXT[],
+  listed_at TIMESTAMP,
+  is_fair_value BOOLEAN,
+  price_vs_market_pct NUMERIC,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_listings_source ON car_listings(source);
+CREATE INDEX idx_listings_country ON car_listings(country);
+CREATE INDEX idx_listings_make_model ON car_listings(make, model);
+
+-- ============================================================
+-- Research Reports
+-- ============================================================
+CREATE TABLE research_reports (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  title VARCHAR(500) NOT NULL,
+  slug VARCHAR(200) UNIQUE NOT NULL,
+  excerpt TEXT,
+  content TEXT,
+  cover_image VARCHAR(500),
+  car_make VARCHAR(100),
+  car_model VARCHAR(100),
+  investment_rating VARCHAR(20),
+  rarity_score INTEGER,
+  road_registered_uk INTEGER,
+  is_premium BOOLEAN DEFAULT true,
+  published_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- ============================================================
+-- Market Data
+-- ============================================================
+CREATE TABLE market_data (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  make VARCHAR(100),
+  model VARCHAR(100),
+  year INTEGER,
+  price INTEGER,
+  currency VARCHAR(3),
+  source VARCHAR(100),
+  sale_date DATE
+);
+
+-- ============================================================
+-- DVLA Registrations
+-- ============================================================
+CREATE TABLE dvla_data (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  make VARCHAR(100),
+  model VARCHAR(100),
+  registered_uk INTEGER,
+  taxed_uk INTEGER,
+  sot_uk INTEGER,
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+-- RLS for new tables
+ALTER TABLE car_listings ENABLE ROW LEVEL SECURITY;
+ALTER TABLE research_reports ENABLE ROW LEVEL SECURITY;
+ALTER TABLE market_data ENABLE ROW LEVEL SECURITY;
+ALTER TABLE dvla_data ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Car listings are viewable by everyone" ON car_listings FOR SELECT USING (true);
+CREATE POLICY "Research reports are viewable by everyone" ON research_reports FOR SELECT USING (true);
+CREATE POLICY "Market data is viewable by everyone" ON market_data FOR SELECT USING (true);
+CREATE POLICY "DVLA data is viewable by everyone" ON dvla_data FOR SELECT USING (true);
