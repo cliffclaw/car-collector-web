@@ -85,21 +85,17 @@ export default async function ListingsPage({
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Make
               </label>
-              <input
-                type="text"
-                placeholder="Search make..."
-                defaultValue={params.make}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
-                onChange={(e) => {
-                  const url = new URL(window.location.href);
-                  if (e.target.value) {
-                    url.searchParams.set('make', e.target.value);
-                  } else {
-                    url.searchParams.delete('make');
-                  }
-                  window.location.href = url.toString();
-                }}
-              />
+              <div className="space-y-1">
+                {['Porsche', 'Ferrari', 'Jaguar', 'TVR', 'Morgan', 'Aston Martin', 'Lamborghini', 'Maserati', 'Jensen'].map((make) => (
+                  <a
+                    key={make}
+                    href={`/listings?make=${make}`}
+                    className={`block px-3 py-2 rounded-lg text-sm ${params.make === make ? 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'}`}
+                  >
+                    {make}
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Price Range */}
@@ -107,19 +103,31 @@ export default async function ListingsPage({
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Price Range (GBP)
               </label>
-              <div className="flex gap-2">
-                <input
-                  type="number"
-                  placeholder="Min"
-                  defaultValue={params.minPrice}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
-                />
-                <input
-                  type="number"
-                  placeholder="Max"
-                  defaultValue={params.maxPrice}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
-                />
+              <div className="space-y-1">
+                <a
+                  href="/listings"
+                  className={`block px-3 py-2 rounded-lg text-sm ${!params.minPrice ? 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'}`}
+                >
+                  Any Price
+                </a>
+                <a
+                  href={`/listings?minPrice=10000&maxPrice=50000`}
+                  className="block px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  £10k - £50k
+                </a>
+                <a
+                  href={`/listings?minPrice=50000&maxPrice=100000`}
+                  className="block px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  £50k - £100k
+                </a>
+                <a
+                  href={`/listings?minPrice=100000`}
+                  className="block px-3 py-2 rounded-lg text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+                >
+                  £100k+
+                </a>
               </div>
             </div>
 
