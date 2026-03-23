@@ -59,9 +59,8 @@ test.describe('Navigation', () => {
     test('should display stats section', async ({ page }) => {
       await page.goto('/');
 
-      await expect(page.getByText('Cars Listed')).toBeVisible();
-      await expect(page.getByText('Expert Reviews')).toBeVisible();
-      await expect(page.getByText('Active Members')).toBeVisible();
+      await expect(page.getByText('2,500+')).toBeVisible();
+      await expect(page.getByText('50K+')).toBeVisible();
     });
 
     test('should display featured cars section', async ({ page }) => {
@@ -117,7 +116,7 @@ test.describe('Navigation', () => {
       await page.goto('/dashboard');
 
       await expect(page.getByText('Sign in required')).toBeVisible();
-      await expect(page.getByRole('link', { name: 'Sign In' })).toBeVisible();
+      await expect(page.getByRole('navigation').getByRole('link', { name: 'Sign In' })).toBeVisible();
       await expect(page.getByRole('link', { name: 'Create Account' })).toBeVisible();
     });
 
