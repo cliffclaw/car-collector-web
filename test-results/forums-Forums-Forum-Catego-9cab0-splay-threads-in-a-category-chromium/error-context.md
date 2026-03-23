@@ -2,98 +2,107 @@
 
 ```yaml
 - generic [active] [ref=e1]:
-  - generic [ref=e6] [cursor=pointer]:
-    - button "Open Next.js Dev Tools" [ref=e7]:
-      - img [ref=e8]
-    - generic [ref=e11]:
-      - button "Open issues overlay" [ref=e12]:
-        - generic [ref=e13]:
-          - generic [ref=e14]: "0"
-          - generic [ref=e15]: "1"
-        - generic [ref=e16]: Issue
-      - button "Collapse issues badge" [ref=e17]:
-        - img [ref=e18]
-  - generic [ref=e20]:
-    - banner [ref=e21]:
-      - navigation [ref=e22]:
-        - generic [ref=e23]:
-          - link "CC CarCollector" [ref=e25] [cursor=pointer]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - navigation [ref=e4]:
+        - generic [ref=e5]:
+          - link "CC CarCollector" [ref=e7] [cursor=pointer]:
             - /url: /
-            - generic [ref=e27]: CC
-            - generic [ref=e28]: CarCollector
-          - generic [ref=e29]:
-            - link "Cars" [ref=e30] [cursor=pointer]:
+            - generic [ref=e9]: CC
+            - generic [ref=e10]: CarCollector
+          - generic [ref=e11]:
+            - link "Cars" [ref=e12] [cursor=pointer]:
               - /url: /cars
-            - link "Reviews" [ref=e31] [cursor=pointer]:
+            - link "Reviews" [ref=e13] [cursor=pointer]:
               - /url: /reviews
-            - link "Market Prices" [ref=e32] [cursor=pointer]:
+            - link "Market Prices" [ref=e14] [cursor=pointer]:
               - /url: /prices
-            - link "Forums" [ref=e33] [cursor=pointer]:
+            - link "Forums" [ref=e15] [cursor=pointer]:
               - /url: /forums
-            - link "Pricing" [ref=e34] [cursor=pointer]:
+            - link "Pricing" [ref=e16] [cursor=pointer]:
               - /url: /pricing
-          - generic [ref=e35]:
-            - button "Toggle theme" [ref=e36] [cursor=pointer]:
-              - img [ref=e37]
-            - link "Sign In" [ref=e39] [cursor=pointer]:
+          - generic [ref=e17]:
+            - button "Toggle theme" [ref=e18] [cursor=pointer]:
+              - img [ref=e19]
+            - link "Sign In" [ref=e21] [cursor=pointer]:
               - /url: /auth/login
-    - main [ref=e40]:
-      - generic [ref=e42]:
-        - heading "404" [level=1] [ref=e43]
-        - heading "This page could not be found." [level=2] [ref=e45]
-    - contentinfo [ref=e46]:
-      - generic [ref=e47]:
-        - generic [ref=e48]:
-          - generic [ref=e49]:
-            - generic [ref=e50]:
-              - generic [ref=e52]: CC
-              - generic [ref=e53]: CarCollector
-            - paragraph [ref=e54]: The premier destination for collector car enthusiasts. Reviews, prices, and community.
-          - generic [ref=e55]:
-            - heading "Explore" [level=3] [ref=e56]
-            - list [ref=e57]:
-              - listitem [ref=e58]:
-                - link "Car Listings" [ref=e59] [cursor=pointer]:
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - navigation [ref=e24]:
+          - link "Forums" [ref=e25] [cursor=pointer]:
+            - /url: /forums
+          - text: /General Discussion
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - heading "General Discussion" [level=1] [ref=e28]
+            - paragraph [ref=e29]: Talk about anything car-related
+          - link "New Thread" [ref=e30] [cursor=pointer]:
+            - /url: /auth/login
+        - 'link "Pinned What''s your dream garage if money was no object? Let''s have some fun. If you could have any 5 cars in your garage, regardless of price, what would they be? Mine would be: 1. Ferrari 250 GTO, 2. McLaren F1, 3. Porsche 959, 4. Mercedes 300SL Gullwing, 5. Shelby Cobra 427 47 replies January 15, 2024" [ref=e32] [cursor=pointer]':
+          - /url: /forums/general/1
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e36]: Pinned
+              - heading "What's your dream garage if money was no object?" [level=3] [ref=e37]
+              - paragraph [ref=e38]: "Let's have some fun. If you could have any 5 cars in your garage, regardless of price, what would they be? Mine would be: 1. Ferrari 250 GTO, 2. McLaren F1, 3. Porsche 959, 4. Mercedes 300SL Gullwing, 5. Shelby Cobra 427"
+            - generic [ref=e39]:
+              - paragraph [ref=e40]: 47 replies
+              - paragraph [ref=e41]: January 15, 2024
+    - contentinfo [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e48]: CC
+              - generic [ref=e49]: CarCollector
+            - paragraph [ref=e50]: The premier destination for collector car enthusiasts. Reviews, prices, and community.
+          - generic [ref=e51]:
+            - heading "Explore" [level=3] [ref=e52]
+            - list [ref=e53]:
+              - listitem [ref=e54]:
+                - link "Car Listings" [ref=e55] [cursor=pointer]:
                   - /url: /cars
-              - listitem [ref=e60]:
-                - link "Reviews" [ref=e61] [cursor=pointer]:
+              - listitem [ref=e56]:
+                - link "Reviews" [ref=e57] [cursor=pointer]:
                   - /url: /reviews
-              - listitem [ref=e62]:
-                - link "Market Prices" [ref=e63] [cursor=pointer]:
+              - listitem [ref=e58]:
+                - link "Market Prices" [ref=e59] [cursor=pointer]:
                   - /url: /prices
-              - listitem [ref=e64]:
-                - link "Forums" [ref=e65] [cursor=pointer]:
+              - listitem [ref=e60]:
+                - link "Forums" [ref=e61] [cursor=pointer]:
                   - /url: /forums
-          - generic [ref=e66]:
-            - heading "Account" [level=3] [ref=e67]
-            - list [ref=e68]:
-              - listitem [ref=e69]:
-                - link "Sign In" [ref=e70] [cursor=pointer]:
+          - generic [ref=e62]:
+            - heading "Account" [level=3] [ref=e63]
+            - list [ref=e64]:
+              - listitem [ref=e65]:
+                - link "Sign In" [ref=e66] [cursor=pointer]:
                   - /url: /auth/login
-              - listitem [ref=e71]:
-                - link "Register" [ref=e72] [cursor=pointer]:
+              - listitem [ref=e67]:
+                - link "Register" [ref=e68] [cursor=pointer]:
                   - /url: /auth/register
-              - listitem [ref=e73]:
-                - link "Premium Plans" [ref=e74] [cursor=pointer]:
+              - listitem [ref=e69]:
+                - link "Premium Plans" [ref=e70] [cursor=pointer]:
                   - /url: /pricing
-              - listitem [ref=e75]:
-                - link "My Profile" [ref=e76] [cursor=pointer]:
+              - listitem [ref=e71]:
+                - link "My Profile" [ref=e72] [cursor=pointer]:
                   - /url: /profile
-          - generic [ref=e77]:
-            - heading "Company" [level=3] [ref=e78]
-            - list [ref=e79]:
+          - generic [ref=e73]:
+            - heading "Company" [level=3] [ref=e74]
+            - list [ref=e75]:
+              - listitem [ref=e76]:
+                - link "About Us" [ref=e77] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e78]:
+                - link "Contact" [ref=e79] [cursor=pointer]:
+                  - /url: "#"
               - listitem [ref=e80]:
-                - link "About Us" [ref=e81] [cursor=pointer]:
+                - link "Privacy Policy" [ref=e81] [cursor=pointer]:
                   - /url: "#"
               - listitem [ref=e82]:
-                - link "Contact" [ref=e83] [cursor=pointer]:
+                - link "Terms of Service" [ref=e83] [cursor=pointer]:
                   - /url: "#"
-              - listitem [ref=e84]:
-                - link "Privacy Policy" [ref=e85] [cursor=pointer]:
-                  - /url: "#"
-              - listitem [ref=e86]:
-                - link "Terms of Service" [ref=e87] [cursor=pointer]:
-                  - /url: "#"
-        - paragraph [ref=e89]: © 2026 CarCollector. All rights reserved.
-  - alert [ref=e90]
+        - paragraph [ref=e85]: © 2026 CarCollector. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]
 ```
