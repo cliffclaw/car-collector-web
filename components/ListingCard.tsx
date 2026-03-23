@@ -22,10 +22,10 @@ export default function ListingCard({ listing }: ListingCardProps) {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow">
-      {/* Image */}
+      {/* Image - use real listing images first, then fallback to make images */}
       <div className="relative h-48 bg-gray-100 dark:bg-gray-700">
         <img
-          src={getCarImage(listing.make, listing.model)}
+          src={listing.images?.[0] || getCarImage(listing.make, listing.model)}
           alt={`${listing.make} ${listing.model}`}
           className="w-full h-full object-cover"
         />
