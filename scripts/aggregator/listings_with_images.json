@@ -1,6 +1,4 @@
-import { CarListing } from '@/types'
-
-export const realListings: CarListing[] = [
+[
   {
     "source": "carandclassic",
     "source_url": "https://www.carandclassic.com/car/C2031705",
@@ -253,4 +251,4 @@ export const realListings: CarListing[] = [
     "price_vs_market_pct": 0,
     "created_at": "2026-03-23T19:14:50.543739"
   }
-];
+]
