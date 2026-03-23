@@ -34,7 +34,7 @@ test.describe('Pricing Page', () => {
     await expect(page.getByText('Access premium reviews')).toBeVisible();
 
     // Collector tier features
-    await expect(page.getByText('Market predictions & analytics')).toBeVisible();
+    await expect(page.getByText('Detailed market analytics')).toBeVisible();
   });
 
   test('should have CTA buttons for each tier', async ({ page }) => {

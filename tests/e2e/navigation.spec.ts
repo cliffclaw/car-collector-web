@@ -107,7 +107,7 @@ test.describe('Navigation', () => {
       await page.goto('/');
 
       const footer = page.locator('footer');
-      await expect(footer.getByRole('link', { name: 'Cars' })).toBeVisible();
+      await expect(footer.getByRole('link', { name: 'Car Listings' })).toBeVisible();
       await expect(footer.getByRole('link', { name: 'Forums' })).toBeVisible();
     });
   });

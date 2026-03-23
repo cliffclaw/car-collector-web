@@ -306,5 +306,4 @@
         - paragraph [ref=e320]: © 2026 CarCollector. All rights reserved.
   - button "Open Next.js Dev Tools" [ref=e326] [cursor=pointer]:
     - img [ref=e327]
-  - alert [ref=e330]
 ```
