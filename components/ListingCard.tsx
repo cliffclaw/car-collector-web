@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CarListing } from '@/types';
 import { getCountryFlag, getSourceName } from '@/lib/mock-listings';
+import { getCarImage } from '@/lib/car-images';
 
 interface ListingCardProps {
   listing: CarListing;
@@ -24,7 +25,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
       {/* Image */}
       <div className="relative h-48 bg-gray-100 dark:bg-gray-700">
         <img
-          src={listing.images?.[0] || 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800'}
+          src={getCarImage(listing.make, listing.model)}
           alt={`${listing.make} ${listing.model}`}
           className="w-full h-full object-cover"
         />
