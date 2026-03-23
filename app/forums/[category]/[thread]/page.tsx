@@ -1,16 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, use } from 'react';
 import Link from 'next/link';
 import ThreadPost from '@/components/ThreadPost';
 import { forumCategories, forumThreads, forumReplies } from '@/lib/mock-data';
 import { formatDate, getInitials } from '@/lib/utils';
 
-export default function ThreadPage({ params }: { params: { category: string; thread: string } }) {
+export default function ThreadPage({ params }: { params: Promise<{ category: string; thread: string }> }) {
+  const { category: categorySlug, thread: threadId } = use(params);
   const [replyContent, setReplyContent] = useState('');
 
-  const category = forumCategories.find((c) => c.slug === params.category);
-  const thread = forumThreads.find((t) => t.id === params.thread);
+  const category = forumCategories.find((c) => c.slug === categorySlug);
+  const thread = forumThreads.find((t) => t.id === threadId);
 
   if (!category || !thread) {
     return (

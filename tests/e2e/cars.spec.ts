@@ -75,7 +75,7 @@ test.describe('Car Detail Page', () => {
     await page.goto('/cars');
     await page.getByRole('link', { name: /Porsche/ }).first().click();
 
-    await expect(page.getByRole('link', { name: 'Cars' })).toBeVisible();
+    await expect(page.locator('nav').getByRole('link', { name: 'Cars' })).toBeVisible();
   });
 
   test('should show car description', async ({ page }) => {
@@ -104,7 +104,7 @@ test.describe('Car Detail Page', () => {
     await page.getByRole('link', { name: /Porsche/ }).first().click();
 
     await expect(page.getByRole('heading', { name: 'Specifications' })).toBeVisible();
-    await expect(page.getByText('Engine')).toBeVisible();
+    await expect(page.getByTestId('car-specs').getByText('Engine')).toBeVisible();
     await expect(page.getByText('Horsepower')).toBeVisible();
     await expect(page.getByText('Transmission')).toBeVisible();
   });

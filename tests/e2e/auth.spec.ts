@@ -62,7 +62,8 @@ test.describe('Authentication', () => {
     test('should have link to login page', async ({ page }) => {
       await page.goto('/auth/register');
 
-      const signInLink = page.getByRole('link', { name: 'Sign in' });
+      const form = page.locator('form');
+      const signInLink = form.getByRole('link', { name: 'Sign in' });
       await expect(signInLink).toBeVisible();
       await expect(signInLink).toHaveAttribute('href', '/auth/login');
     });
@@ -95,7 +96,7 @@ test.describe('Authentication', () => {
 
     test('should navigate from register to login', async ({ page }) => {
       await page.goto('/auth/register');
-      await page.getByRole('link', { name: 'Sign in' }).click();
+      await page.locator('form').getByRole('link', { name: 'Sign in' }).click();
       await expect(page).toHaveURL('/auth/login');
       await expect(page.getByRole('heading', { name: 'Welcome back' })).toBeVisible();
     });

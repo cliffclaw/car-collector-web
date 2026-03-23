@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return cars.map((car) => ({ id: car.id }));
 }
 
-export default function CarDetailPage({ params }: { params: { id: string } }) {
-  const car = cars.find((c) => c.id === params.id);
+export default async function CarDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const car = cars.find((c) => c.id === id);
 
   if (!car) {
     notFound();

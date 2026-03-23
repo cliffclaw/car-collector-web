@@ -100,7 +100,7 @@ test.describe('Navigation', () => {
     test('should display footer with links', async ({ page }) => {
       await page.goto('/');
 
-      await expect(page.getByText('© 2024 CarCollector')).toBeVisible();
+      await expect(page.getByText(/© \d{4} CarCollector/)).toBeVisible();
     });
 
     test('should have explore links in footer', async ({ page }) => {

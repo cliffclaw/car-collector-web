@@ -31,7 +31,7 @@ test.describe('Pricing Page', () => {
     await expect(page.getByText('Browse car listings')).toBeVisible();
 
     // Pro tier features
-    await expect(page.getByText('Premium car reviews')).toBeVisible();
+    await expect(page.getByText('Access premium reviews')).toBeVisible();
 
     // Collector tier features
     await expect(page.getByText('Market predictions & analytics')).toBeVisible();

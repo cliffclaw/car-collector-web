@@ -1,14 +1,16 @@
 'use client';
 
+import { use } from 'react';
 import Link from 'next/link';
 import { cars, priceHistories } from '@/lib/mock-data';
 import { formatPrice } from '@/lib/utils';
 import PriceChart from '@/components/PriceChart';
 import SubscriptionGate from '@/components/SubscriptionGate';
 
-export default function PriceHistoryPage({ params }: { params: { id: string } }) {
-  const car = cars.find((c) => c.id === params.id);
-  const prices = priceHistories.filter((p) => p.car_id === params.id);
+export default function PriceHistoryPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
+  const car = cars.find((c) => c.id === id);
+  const prices = priceHistories[id] || [];
 
   if (!car) {
     return (

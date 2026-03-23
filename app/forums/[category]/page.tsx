@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return forumCategories.map((cat) => ({ category: cat.slug }));
 }
 
-export default function ForumCategoryPage({ params }: { params: { category: string } }) {
-  const category = forumCategories.find((c) => c.slug === params.category);
+export default async function ForumCategoryPage({ params }: { params: Promise<{ category: string }> }) {
+  const { category: categorySlug } = await params;
+  const category = forumCategories.find((c) => c.slug === categorySlug);
 
   if (!category) {
     notFound();

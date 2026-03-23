@@ -79,7 +79,7 @@ export default function PriceChart({ data, isPremium = false }: PriceChartProps)
               borderRadius: '8px',
               color: '#fff',
             }}
-            formatter={(value: number) => [formatPrice(value), 'Price']}
+            formatter={(value) => [formatPrice(value as number), 'Price']}
             labelFormatter={(label) => label}
           />
           <Area

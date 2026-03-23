@@ -1,0 +1,99 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e6] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e7]:
+      - img [ref=e8]
+    - generic [ref=e11]:
+      - button "Open issues overlay" [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "0"
+          - generic [ref=e15]: "1"
+        - generic [ref=e16]: Issue
+      - button "Collapse issues badge" [ref=e17]:
+        - img [ref=e18]
+  - generic [ref=e20]:
+    - banner [ref=e21]:
+      - navigation [ref=e22]:
+        - generic [ref=e23]:
+          - link "CC CarCollector" [ref=e25] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e27]: CC
+            - generic [ref=e28]: CarCollector
+          - generic [ref=e29]:
+            - link "Cars" [ref=e30] [cursor=pointer]:
+              - /url: /cars
+            - link "Reviews" [ref=e31] [cursor=pointer]:
+              - /url: /reviews
+            - link "Market Prices" [ref=e32] [cursor=pointer]:
+              - /url: /prices
+            - link "Forums" [ref=e33] [cursor=pointer]:
+              - /url: /forums
+            - link "Pricing" [ref=e34] [cursor=pointer]:
+              - /url: /pricing
+          - generic [ref=e35]:
+            - button "Toggle theme" [ref=e36] [cursor=pointer]:
+              - img [ref=e37]
+            - link "Sign In" [ref=e39] [cursor=pointer]:
+              - /url: /auth/login
+    - main [ref=e40]:
+      - generic [ref=e42]:
+        - heading "404" [level=1] [ref=e43]
+        - heading "This page could not be found." [level=2] [ref=e45]
+    - contentinfo [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e52]: CC
+              - generic [ref=e53]: CarCollector
+            - paragraph [ref=e54]: The premier destination for collector car enthusiasts. Reviews, prices, and community.
+          - generic [ref=e55]:
+            - heading "Explore" [level=3] [ref=e56]
+            - list [ref=e57]:
+              - listitem [ref=e58]:
+                - link "Car Listings" [ref=e59] [cursor=pointer]:
+                  - /url: /cars
+              - listitem [ref=e60]:
+                - link "Reviews" [ref=e61] [cursor=pointer]:
+                  - /url: /reviews
+              - listitem [ref=e62]:
+                - link "Market Prices" [ref=e63] [cursor=pointer]:
+                  - /url: /prices
+              - listitem [ref=e64]:
+                - link "Forums" [ref=e65] [cursor=pointer]:
+                  - /url: /forums
+          - generic [ref=e66]:
+            - heading "Account" [level=3] [ref=e67]
+            - list [ref=e68]:
+              - listitem [ref=e69]:
+                - link "Sign In" [ref=e70] [cursor=pointer]:
+                  - /url: /auth/login
+              - listitem [ref=e71]:
+                - link "Register" [ref=e72] [cursor=pointer]:
+                  - /url: /auth/register
+              - listitem [ref=e73]:
+                - link "Premium Plans" [ref=e74] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e75]:
+                - link "My Profile" [ref=e76] [cursor=pointer]:
+                  - /url: /profile
+          - generic [ref=e77]:
+            - heading "Company" [level=3] [ref=e78]
+            - list [ref=e79]:
+              - listitem [ref=e80]:
+                - link "About Us" [ref=e81] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e82]:
+                - link "Contact" [ref=e83] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e84]:
+                - link "Privacy Policy" [ref=e85] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e86]:
+                - link "Terms of Service" [ref=e87] [cursor=pointer]:
+                  - /url: "#"
+        - paragraph [ref=e89]: © 2026 CarCollector. All rights reserved.
+  - alert [ref=e90]
+```

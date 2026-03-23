@@ -1,0 +1,181 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - navigation [ref=e4]:
+        - generic [ref=e5]:
+          - link "CC CarCollector" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e9]: CC
+            - generic [ref=e10]: CarCollector
+          - generic [ref=e11]:
+            - link "Cars" [ref=e12] [cursor=pointer]:
+              - /url: /cars
+            - link "Reviews" [ref=e13] [cursor=pointer]:
+              - /url: /reviews
+            - link "Market Prices" [ref=e14] [cursor=pointer]:
+              - /url: /prices
+            - link "Forums" [ref=e15] [cursor=pointer]:
+              - /url: /forums
+            - link "Pricing" [ref=e16] [cursor=pointer]:
+              - /url: /pricing
+          - generic [ref=e17]:
+            - button "Toggle theme" [ref=e18] [cursor=pointer]:
+              - img [ref=e19]
+            - link "Sign In" [ref=e21] [cursor=pointer]:
+              - /url: /auth/login
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - heading "Choose Your Plan" [level=1] [ref=e25]
+          - paragraph [ref=e26]: From casual enthusiasts to serious collectors, we have a plan that fits your needs.
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - heading "Free" [level=3] [ref=e29]
+            - generic [ref=e31]: $0
+            - list [ref=e32]:
+              - listitem [ref=e33]:
+                - generic [ref=e34]: ✓
+                - generic [ref=e35]: Browse car listings
+              - listitem [ref=e36]:
+                - generic [ref=e37]: ✓
+                - generic [ref=e38]: Read basic reviews
+              - listitem [ref=e39]:
+                - generic [ref=e40]: ✓
+                - generic [ref=e41]: View current market prices
+              - listitem [ref=e42]:
+                - generic [ref=e43]: ✓
+                - generic [ref=e44]: Join forum discussions
+            - link "Get Started Free" [ref=e45] [cursor=pointer]:
+              - /url: /auth/register
+          - generic [ref=e46]:
+            - generic [ref=e47]: Most Popular
+            - heading "Pro" [level=3] [ref=e48]
+            - generic [ref=e49]:
+              - generic [ref=e50]: $9.99
+              - text: /month
+            - list [ref=e51]:
+              - listitem [ref=e52]:
+                - generic [ref=e53]: ✓
+                - generic [ref=e54]: Everything in Free
+              - listitem [ref=e55]:
+                - generic [ref=e56]: ✓
+                - generic [ref=e57]: Access premium reviews
+              - listitem [ref=e58]:
+                - generic [ref=e59]: ✓
+                - generic [ref=e60]: Historical price charts
+              - listitem [ref=e61]:
+                - generic [ref=e62]: ✓
+                - generic [ref=e63]: Advanced search filters
+              - listitem [ref=e64]:
+                - generic [ref=e65]: ✓
+                - generic [ref=e66]: Save unlimited cars
+              - listitem [ref=e67]:
+                - generic [ref=e68]: ✓
+                - generic [ref=e69]: Priority forum support
+            - link "Subscribe Now" [ref=e70] [cursor=pointer]:
+              - /url: /auth/register
+          - generic [ref=e71]:
+            - heading "Collector" [level=3] [ref=e72]
+            - generic [ref=e73]:
+              - generic [ref=e74]: $29.99
+              - text: /month
+            - list [ref=e75]:
+              - listitem [ref=e76]:
+                - generic [ref=e77]: ✓
+                - generic [ref=e78]: Everything in Pro
+              - listitem [ref=e79]:
+                - generic [ref=e80]: ✓
+                - generic [ref=e81]: Detailed market analytics
+              - listitem [ref=e82]:
+                - generic [ref=e83]: ✓
+                - generic [ref=e84]: Price prediction models
+              - listitem [ref=e85]:
+                - generic [ref=e86]: ✓
+                - generic [ref=e87]: Expert valuation reports
+              - listitem [ref=e88]:
+                - generic [ref=e89]: ✓
+                - generic [ref=e90]: Exclusive collector forums
+              - listitem [ref=e91]:
+                - generic [ref=e92]: ✓
+                - generic [ref=e93]: Early access to new listings
+              - listitem [ref=e94]:
+                - generic [ref=e95]: ✓
+                - generic [ref=e96]: Personal collection tracker
+            - link "Subscribe Now" [ref=e97] [cursor=pointer]:
+              - /url: /auth/register
+        - generic [ref=e98]:
+          - heading "Frequently Asked Questions" [level=2] [ref=e99]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - heading "Can I change my plan later?" [level=3] [ref=e102]
+              - paragraph [ref=e103]: Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.
+            - generic [ref=e104]:
+              - heading "Is there a free trial?" [level=3] [ref=e105]
+              - paragraph [ref=e106]: All paid plans come with a 14-day free trial. No credit card required to start.
+            - generic [ref=e107]:
+              - heading "What payment methods do you accept?" [level=3] [ref=e108]
+              - paragraph [ref=e109]: We accept all major credit cards, Apple Pay, and Google Pay through our secure payment processor.
+            - generic [ref=e110]:
+              - heading "Can I cancel at any time?" [level=3] [ref=e111]
+              - paragraph [ref=e112]: Absolutely. You can cancel your subscription at any time with no cancellation fees.
+    - contentinfo [ref=e113]:
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e119]: CC
+              - generic [ref=e120]: CarCollector
+            - paragraph [ref=e121]: The premier destination for collector car enthusiasts. Reviews, prices, and community.
+          - generic [ref=e122]:
+            - heading "Explore" [level=3] [ref=e123]
+            - list [ref=e124]:
+              - listitem [ref=e125]:
+                - link "Car Listings" [ref=e126] [cursor=pointer]:
+                  - /url: /cars
+              - listitem [ref=e127]:
+                - link "Reviews" [ref=e128] [cursor=pointer]:
+                  - /url: /reviews
+              - listitem [ref=e129]:
+                - link "Market Prices" [ref=e130] [cursor=pointer]:
+                  - /url: /prices
+              - listitem [ref=e131]:
+                - link "Forums" [ref=e132] [cursor=pointer]:
+                  - /url: /forums
+          - generic [ref=e133]:
+            - heading "Account" [level=3] [ref=e134]
+            - list [ref=e135]:
+              - listitem [ref=e136]:
+                - link "Sign In" [ref=e137] [cursor=pointer]:
+                  - /url: /auth/login
+              - listitem [ref=e138]:
+                - link "Register" [ref=e139] [cursor=pointer]:
+                  - /url: /auth/register
+              - listitem [ref=e140]:
+                - link "Premium Plans" [ref=e141] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e142]:
+                - link "My Profile" [ref=e143] [cursor=pointer]:
+                  - /url: /profile
+          - generic [ref=e144]:
+            - heading "Company" [level=3] [ref=e145]
+            - list [ref=e146]:
+              - listitem [ref=e147]:
+                - link "About Us" [ref=e148] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e149]:
+                - link "Contact" [ref=e150] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e151]:
+                - link "Privacy Policy" [ref=e152] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e153]:
+                - link "Terms of Service" [ref=e154] [cursor=pointer]:
+                  - /url: "#"
+        - paragraph [ref=e156]: © 2026 CarCollector. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e162] [cursor=pointer]:
+    - img [ref=e163]
+  - alert [ref=e166]
+```

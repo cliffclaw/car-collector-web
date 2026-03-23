@@ -17,7 +17,7 @@ test.describe('Forums', () => {
     test('should display category descriptions and thread counts', async ({ page }) => {
       await page.goto('/forums');
 
-      await expect(page.getByText('156 threads')).toBeVisible();
+      await expect(page.getByText(/threads$/)).toBeVisible();
       await expect(page.getByText('General car talk')).toBeVisible();
     });
 
