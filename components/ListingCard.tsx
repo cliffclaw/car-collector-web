@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { CarListing } from '@/types';
 import { getCountryFlag, getSourceName } from '@/lib/mock-listings';
-import { getCarImage } from '@/lib/car-images';
 
 interface ListingCardProps {
   listing: CarListing;
@@ -24,10 +23,10 @@ export default function ListingCard({ listing }: ListingCardProps) {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow">
-      {/* Image - use make-specific images that work reliably */}
+      {/* Image - use only real listing images */}
       <div className="relative h-48 bg-gray-100 dark:bg-gray-700">
         <img
-          src={getCarImage(listing.make, listing.model)}
+          src={listing.images?.[0] || '/placeholder-car.jpg'}
           alt={`${listing.make} ${listing.model}`}
           className="w-full h-full object-cover"
         />
